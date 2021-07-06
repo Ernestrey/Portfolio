@@ -5,43 +5,51 @@ html {
 body {
   font-family: "Comfortaa", cursive;
   font-weight: normal;
-  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  padding-top: 150px;
   margin: 0 auto;
-  width: 945px;
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
+.header-burger {
+  display: none;
+  z-index: 51;
+}
+
+.header-body {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
   text-align: center;
-  padding: 32px 0;
-  margin-bottom: 40px;
+  padding: 20px 0;
   font-size: 18px;
-  border-bottom: 1px solid #828282;
+  border-bottom: 1px solid #8f8f8f;
 }
 
-.first {
-  text-align: left;
-}
-
-.last {
-  text-align: right;
-}
-
-.menu a {
+.header-body a {
   text-decoration: none;
   color: #828282;
-  width: 115px;
 }
 
-.menu a:hover {
+.header-body a:hover {
   color: black;
   font-weight: 700;
 }
 
+.header-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
 .main-menu {
   position: relative;
-  display: flex;
 }
 
 h1 {
@@ -53,8 +61,9 @@ h1 {
 .info {
   font-size: 18px;
   position: absolute;
-  top: 60px;
-  left: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .language {
@@ -73,9 +82,19 @@ h1 {
 .box-img {
   position: relative;
   overflow: hidden;
-  width: 944px;
-  height: 450px;
-  margin-top: 40px;
+  width: auto;
+  height: 387px;
+  margin-top: 31px;
+}
+
+.main-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 700px;
+  margin-top: 150px;
 }
 
 .section {
@@ -84,9 +103,10 @@ h1 {
 }
 
 .section-2 {
-  margin: 224px 0;
+  margin: 150px 0;
   text-align: center;
 }
+
 .heading {
   margin: 0;
   font-size: 34px;
@@ -97,7 +117,6 @@ h1 {
 .text {
   font-size: 18px;
   display: inline-block;
-  width: 486px;
 }
 
 .text p {
@@ -132,7 +151,8 @@ h1 {
 .bg-img2 {
   position: absolute;
   top: 170px;
-  left: 410px;
+  left: 40%;
+  right: 40%;
 }
 
 .bg-img3 {
@@ -151,8 +171,13 @@ h1 {
   margin-top: 47px;
 }
 
-.MoGo {
+.project {
   margin-bottom: 99px;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
 }
 
 .text-portfolio {
@@ -163,10 +188,6 @@ h1 {
   font-size: 18px;
   color: black;
   margin: auto;
-}
-
-.contacts {
-  margin-top: 210px;
 }
 
 .heading-contacts {
@@ -191,6 +212,7 @@ form {
   margin: 86px 0 45px 0;
   display: flex;
   justify-content: space-around;
+  max-width: 100%;
 }
 
 .subscribe {
@@ -198,15 +220,71 @@ form {
   color: #828282;
 }
 
-.scroll .top {
-  position: fixed;
-  top: 10px;
-  left: 150px;
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
 }
-
-.scroll .bottom {
-  transform: scale(1, -1);
-  position: fixed;
-  bottom: 10px;
-  left: 150px;
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  h1 {
+    margin-bottom: 23px;
+  }
+  .info {
+    position: static;
+    left: 0;
+    top: 50px;
+    transform: translate(0, 0);
+  }
+}
+@media (max-width: 769px) {
+  .container {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 130px 20px 0 20px;
+  }
+  h1 {
+    margin-bottom: 23px;
+  }
+  .info {
+    position: static;
+    left: 0;
+    top: 50px;
+    transform: translate(0, 0);
+  }
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bg-img1 {
+    position: static;
+    margin: 20px 0 40px;
+  }
+  .bg-img2 {
+    position: static;
+    margin: 20px 0 40px;
+  }
+  .bg-img3 {
+    position: static;
+    margin: 20px 0;
+  }
+  .scroll .top {
+    display: none;
+  }
+}
+@media (max-width: 426px) {
+  .box-img {
+    width: 316.5;
+    height: 478px;
+  }
+  .main-img {
+    width: auto;
+    height: 500px;
+    margin-top: 10px;
+  }
 }
