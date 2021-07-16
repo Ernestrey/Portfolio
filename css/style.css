@@ -19,21 +19,22 @@ body {
   width: 100%;
   left: 0;
   top: 0;
-  background-color: #fff;
   text-align: center;
   padding: 20px 0;
   font-size: 18px;
-  border-bottom: 1px solid #8f8f8f;
 }
 
 .header-body a {
   text-decoration: none;
-  color: #828282;
 }
 
 .header-body a:hover {
-  color: black;
   font-weight: 700;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-around;
 }
 
 .header-list {
@@ -41,6 +42,19 @@ body {
   justify-content: space-around;
   list-style: none;
   padding: 0;
+}
+
+.header-link {
+  padding-right: 150px;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .main-menu {
@@ -71,7 +85,6 @@ h1 {
 
 .language a {
   text-decoration: none;
-  color: black;
 }
 
 .box-img {
@@ -134,7 +147,6 @@ h1 {
   margin-top: 10px;
   font-size: 14px;
   font-weight: 700;
-  color: #828282;
 }
 
 .bg-img1 {
@@ -157,8 +169,8 @@ h1 {
 }
 
 .portfolio {
-  background: #f6f6f6;
   margin-top: 212px;
+  padding: 100px 0;
 }
 
 .projects {
@@ -181,7 +193,6 @@ h1 {
 
 .text-portfolio a {
   font-size: 18px;
-  color: black;
   margin: auto;
 }
 
@@ -196,14 +207,12 @@ form {
 .button {
   text-decoration: none;
   font-size: 18px;
-  background: #000;
-  color: white;
   padding: 13px 30px;
   border-radius: 50px;
   font-weight: 700;
 }
 
-.img {
+.social-img {
   margin: 86px 0 45px 0;
   display: flex;
   justify-content: space-around;
@@ -212,7 +221,10 @@ form {
 
 .subscribe {
   font-size: 14px;
-  color: #828282;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 1200px) {
